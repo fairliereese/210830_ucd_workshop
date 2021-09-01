@@ -1,10 +1,10 @@
 # note - this was run using the development branch of TALON: https://github.com/mortazavilab/TALON/tree/development
 
 # mapped, cleaned bam files
-wget https://www.encodeproject.org/files/ENCFF652XIT/@@download/ENCFF652XIT.bam c2c12_myoblast_1.bam 
-wget https://www.encodeproject.org/files/ENCFF408MUF/@@download/ENCFF408MUF.bam c2c12_myoblast_2.bam
-wget https://www.encodeproject.org/files/ENCFF202MCY/@@download/ENCFF202MCY.bam c2c12_myotube_1.bam
-wget https://www.encodeproject.org/files/ENCFF396UFT/@@download/ENCFF396UFT.bam c2c12_myotube_2.bam
+wget https://www.encodeproject.org/files/ENCFF652XIT/@@download/ENCFF652XIT.bam -O c2c12_myoblast_1.bam 
+wget https://www.encodeproject.org/files/ENCFF408MUF/@@download/ENCFF408MUF.bam -O c2c12_myoblast_2.bam
+wget https://www.encodeproject.org/files/ENCFF202MCY/@@download/ENCFF202MCY.bam -O c2c12_myotube_1.bam
+wget https://www.encodeproject.org/files/ENCFF396UFT/@@download/ENCFF396UFT.bam -O c2c12_myotube_2.bam
 
 # reference
 mkdir ref

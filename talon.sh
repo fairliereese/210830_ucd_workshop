@@ -26,6 +26,7 @@ talon_initialize_database \
 talon \
     --f config.csv \
     --db c2c12.db \
+    --build mm10 \
     --o c2c12
 
 talon_filter_transcripts \
@@ -44,8 +45,8 @@ talon_create_GTF \
     --o all
     
 talon_abundance \
-    --db c2c12.db \
-    -a vM21 \
+    --db c2c12_bulk.db \
+    -a PB_Gaby \
     --whitelist all_pass_list.csv \
     -b mm10 \
     --o all

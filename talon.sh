@@ -1,3 +1,5 @@
+# note - this was run using the development branch of TALON: https://github.com/mortazavilab/TALON/tree/development
+
 # mapped, cleaned bam files
 wget https://www.encodeproject.org/files/ENCFF652XIT/@@download/ENCFF652XIT.bam c2c12_myoblast_1.bam 
 wget https://www.encodeproject.org/files/ENCFF408MUF/@@download/ENCFF408MUF.bam c2c12_myoblast_2.bam

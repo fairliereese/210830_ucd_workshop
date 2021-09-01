@@ -41,7 +41,7 @@ sg.save_graph('swan')
 
 
 ```python
-# compare 0 and 72 hr time point 
+# compare 0 and 72 hr time point
 obs_col = 'time_point'
 obs_conditions = ['0hr', '72hr']
 _ = sg.de_gene_test(obs_col, obs_conditions=obs_conditions)
@@ -60,7 +60,7 @@ _ = sg.find_ir_genes()
 
 
 ```python
-# save graph again so we have access to all the results 
+# save graph again so we have access to all the results
 sg.save_graph('swan')
 ```
 
@@ -89,9 +89,9 @@ sg.plot_graph('Tfdp1', indicate_novel=True)
 ```
 
 
-    
+
 ![png](output_12_0.png)
-    
+
 
 
 
@@ -100,9 +100,9 @@ sg.plot_transcript_path('TALONT000169332', indicate_novel=True)
 ```
 
 
-    
+
 ![png](output_13_0.png)
-    
+
 
 
 
@@ -120,8 +120,8 @@ sg.gen_report('Chp1',
               metadata_cols=['time_point'],
               cmap='magma',
               transcript_name=True,
-              novelty=True, 
-              layer='pi', 
+              novelty=True,
+              layer='pi',
               browser=True,
               display_numbers=True)
 
@@ -139,9 +139,9 @@ sc.pl.matrixplot(sg.adata, var_names,
 
 
 
-    
+
 ![png](output_14_1.png)
-    
+
 
 
 
@@ -159,8 +159,8 @@ sg.gen_report('Tnnt2',
               metadata_cols=['time_point'],
               cmap='magma',
               transcript_name=True,
-              novelty=True, 
-              layer='pi', 
+              novelty=True,
+              layer='pi',
               browser=True,
               display_numbers=True)
 
@@ -179,9 +179,9 @@ sc.pl.matrixplot(sg.tss_adata, var_names,
 
 
 
-    
+
 ![png](output_15_1.png)
-    
+
 
 
 
@@ -189,7 +189,7 @@ sc.pl.matrixplot(sg.tss_adata, var_names,
 sg.gen_report('Tpm1',
               'figures/tpm1',
               metadata_cols=['time_point'],
-              groupby='time_point', 
+              groupby='time_point',
               cmap='viridis',
               transcript_name=True,
               novelty=True,
@@ -198,7 +198,7 @@ sg.gen_report('Tpm1',
 sg.gen_report('Tpm1',
               'figures/tpm1',
               metadata_cols=['time_point'],
-              groupby='time_point', 
+              groupby='time_point',
               cmap='viridis',
               transcript_name=True,
               novelty=True,
@@ -212,9 +212,9 @@ sc.pl.matrixplot(sg.tes_adata, var_names,
 ```
 
 
-    
+
 ![png](output_16_0.png)
-    
+
 
 
 ## Your turn!
@@ -243,7 +243,7 @@ Now we'll take a look at some of the results from Swan and make some cool plots.
 ```python
 # download the SwanGraph
 !wget http://crick.bio.uci.edu/freese/210830_ucd_workshop/swan.p
-    
+
 # create a figures directory because there will be a lot of output figures!
 !mkdir figures
 ```
@@ -287,19 +287,6 @@ es.head()
 
 
 <div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -381,19 +368,6 @@ es.loc[es.gname == 'Srsf4'] # Srsf4 is a splicing factor!
 
 
 <div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -424,9 +398,9 @@ sg.plot_graph('Srsf4', indicate_novel=True)
 ```
 
 
-    
+
 ![png](output_32_0.png)
-    
+
 
 
 
@@ -435,9 +409,9 @@ sg.plot_transcript_path('TALONT000495077', indicate_novel=True)
 ```
 
 
-    
+
 ![png](output_33_0.png)
-    
+
 
 
 
@@ -449,19 +423,7 @@ es.loc[es.gname == 'Tnnt3']
 
 
 <div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
 
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -492,9 +454,9 @@ sg.plot_graph('Tnnt3', indicate_novel=True)
 ```
 
 
-    
+
 ![png](output_35_0.png)
-    
+
 
 
 
@@ -503,9 +465,9 @@ sg.plot_transcript_path('TALONT000560315', indicate_novel=True)
 ```
 
 
-    
+
 ![png](output_36_0.png)
-    
+
 
 
 
@@ -517,19 +479,7 @@ es.loc[es.gname == 'Vim']
 
 
 <div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
 
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -560,9 +510,9 @@ sg.plot_graph('Vim', indicate_novel=True)
 ```
 
 
-    
+
 ![png](output_38_0.png)
-    
+
 
 
 
@@ -571,9 +521,9 @@ sg.plot_transcript_path('TALONT000162980', indicate_novel=True)
 ```
 
 
-    
+
 ![png](output_39_0.png)
-    
+
 
 
 ### What genes contain novel intron retention events?
@@ -600,19 +550,7 @@ ir.head()
 
 
 <div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
 
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -689,9 +627,9 @@ sg.plot_graph('Plekhb2', indicate_novel=True)
 ```
 
 
-    
+
 ![png](output_44_0.png)
-    
+
 
 
 
@@ -703,19 +641,7 @@ ir.loc[ir.gname == 'Plekhb2']
 
 
 <div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
 
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -753,9 +679,9 @@ sg.plot_transcript_path('TALONT000218169', indicate_novel=True)
 ```
 
 
-    
+
 ![png](output_46_0.png)
-    
+
 
 
 
@@ -764,9 +690,9 @@ sg.plot_transcript_path('TALONT000218169', browser=True)
 ```
 
 
-    
+
 ![png](output_47_0.png)
-    
+
 
 
 
@@ -787,9 +713,9 @@ sg.plot_graph('Oaz1', indicate_novel=True)
 ```
 
 
-    
+
 ![png](output_49_0.png)
-    
+
 
 
 
@@ -801,19 +727,7 @@ ir.loc[ir.gname == 'Oaz1']
 
 
 <div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
 
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -844,9 +758,9 @@ sg.plot_transcript_path('TALONT000269069', indicate_novel=True)
 ```
 
 
-    
+
 ![png](output_51_0.png)
-    
+
 
 
 ### What genes are differentially-expressed between myotubes and myoblasts?
@@ -874,19 +788,7 @@ de_genes.head()
 
 
 <div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
 
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -991,19 +893,7 @@ de_genes.loc[de_genes.gname.str.contains('Myo')].head()
 
 
 <div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
 
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -1131,19 +1021,7 @@ de_transcripts.head()
 
 
 <div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
 
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -1254,19 +1132,7 @@ de_transcripts.loc[de_transcripts.gname.str.contains('Myo')].head()
 
 
 <div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
 
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -1382,13 +1248,13 @@ print(de_transcripts.loc[de_transcripts.gname == 'Tpm2'])
     146957  TALONT000523760  0.000002  0.000020    2.987293  13.641756      False   
     146953  TALONT000523686  0.006228  0.042511    2.183307   4.312392      False   
     146951  TALONT000523682  0.000022  0.000176    1.360462  14.967567      False   
-    
+
                 grad    coef_mle        coef_sd         ll                    gid  \
     146970  0.999999  283.913085  2.222759e-162 -38.394349  ENSMUSG00000032294.17   
     146957  0.352200    2.987293   6.332595e-01  -4.011946  ENSMUSG00000032294.17   
     146953  0.000038    2.183307   7.981339e-01  -6.115639  ENSMUSG00000032294.17   
     146951  1.263405    1.360462   3.206211e-01   0.000000  ENSMUSG00000032294.17   
-    
+
            gname  
     146970   Pkm  
     146957   Pkm  
@@ -1400,14 +1266,14 @@ print(de_transcripts.loc[de_transcripts.gname == 'Tpm2'])
     145517       TALONT000415177  0.000000  0.000000  283.913085    2.141371   
     26461   ENSMUST00000107913.9  0.000000  0.000000    3.570377  673.755588   
     145515       TALONT000415088  0.003188  0.022426    3.218529    5.673465   
-    
+
             zero_mean      grad    coef_mle        coef_sd         ll  \
     145514      False  1.000000  283.913085  2.222759e-162 -41.851966   
     145516      False  1.000000  283.913085  2.222759e-162 -39.562596   
     145517      False  1.000004  283.913085  2.222759e-162 -35.287652   
     26461       False  5.430085    3.570377   1.180513e-01   0.000000   
     145515      False  0.091297    3.218529   1.091389e+00   0.000000   
-    
+
                               gid gname  
     145514  ENSMUSG00000028464.16  Tpm2  
     145516  ENSMUSG00000028464.16  Tpm2  
@@ -1429,7 +1295,7 @@ len(de_transcripts.index)
 
 
 
-We can use different colors to represent the two different time points in the dataset. Change them if you'd like! You can either use hex codes or [named matplotlib colors](https://matplotlib.org/stable/gallery/color/named_colors.html). 
+We can use different colors to represent the two different time points in the dataset. Change them if you'd like! You can either use hex codes or [named matplotlib colors](https://matplotlib.org/stable/gallery/color/named_colors.html).
 
 
 ```python
@@ -1447,13 +1313,13 @@ sg.gen_report('Myo6',
               'figures/myo6',
               metadata_cols=['time_point'],
               cmap='viridis',
-              transcript_name=True, 
+              transcript_name=True,
               include_qvals=True,
               qval_obs_col='time_point',
               qval_obs_conditions=['0hr', '72hr'])
 ```
 
-    
+
     Plotting transcripts for ENSMUSG00000033577.18
     Saving transcript path graph for TALONT000562244 as figures/myo6_TALONT000562244_path.png
     Saving transcript path graph for ENSMUST00000138650.2 as figures/myo6_ENSMUST00000138650.2_path.png
@@ -1483,19 +1349,7 @@ die_genes.head()
 
 
 <div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
 
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -1565,19 +1419,7 @@ die_genes.head()
 
 
 <div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
 
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -1647,19 +1489,7 @@ die_genes.loc[die_genes.gname == 'Dlgap4']
 
 
 <div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
 
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -1692,11 +1522,11 @@ sg.gen_report('Dlgap4',
               'figures/dlgap4',
               metadata_cols=['time_point'],
               cmap='viridis',
-              transcript_name=True, 
+              transcript_name=True,
               browser=True)
 ```
 
-    
+
     Plotting transcripts for ENSMUSG00000061689.15
     Saving transcript path graph for ENSMUST00000109566.8 as figures/dlgap4_browser_ENSMUST00000109566.8_path.png
     Saving transcript path graph for ENSMUST00000099145.5 as figures/dlgap4_browser_ENSMUST00000099145.5_path.png
@@ -1711,12 +1541,12 @@ sg.gen_report('Dlgap4',
               'figures/dlgap4',
               metadata_cols=['time_point'],
               cmap='magma',
-              transcript_name=True, 
+              transcript_name=True,
               layer='pi',
               display_numbers=True)
 ```
 
-    
+
     Plotting transcripts for ENSMUSG00000061689.15
     Saving transcript path graph for ENSMUST00000109566.8 as figures/dlgap4_ENSMUST00000109566.8_path.png
     Saving transcript path graph for ENSMUST00000099145.5 as figures/dlgap4_ENSMUST00000099145.5_path.png
@@ -1734,19 +1564,7 @@ die_genes.loc[die_genes.gname == 'Tnnt2']
 
 
 <div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
 
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -1780,11 +1598,11 @@ sg.gen_report('Tnnt2',
               metadata_cols=['time_point'],
               cmap='viridis',
               transcript_name=True,
-              novelty=True, 
+              novelty=True,
               indicate_novel=True)
 ```
 
-    
+
     Plotting transcripts for ENSMUSG00000026414.13
     Saving transcript path graph for TALONT000394811 as figures/tnnt2_novel_TALONT000394811_path.png
     Saving transcript path graph for TALONT000394812 as figures/tnnt2_novel_TALONT000394812_path.png
@@ -1811,11 +1629,11 @@ sg.gen_report('Tnnt2',
               transcript_name=True,
               layer='pi',
               display_numbers=True,
-              novelty=True, 
+              novelty=True,
               browser=True)
 ```
 
-    
+
     Plotting transcripts for ENSMUSG00000026414.13
     Saving transcript path graph for TALONT000394811 as figures/tnnt2_browser_TALONT000394811_path.png
     Saving transcript path graph for TALONT000394812 as figures/tnnt2_browser_TALONT000394812_path.png
@@ -1842,19 +1660,7 @@ die_genes.loc[die_genes.gname == 'Coro6']
 
 
 <div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
 
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -1888,11 +1694,11 @@ sg.gen_report('Coro6',
               metadata_cols=['time_point'],
               cmap='viridis',
               transcript_name=True,
-              novelty=True, 
+              novelty=True,
               indicate_novel=True)
 ```
 
-    
+
     Plotting transcripts for ENSMUSG00000020836.15
     Saving transcript path graph for TALONT000544061 as figures/coro6_novel_TALONT000544061_path.png
     Saving transcript path graph for ENSMUST00000102493.7 as figures/coro6_novel_ENSMUST00000102493.7_path.png
@@ -1912,12 +1718,12 @@ sg.gen_report('Coro6',
               metadata_cols=['time_point'],
               cmap='magma',
               transcript_name=True,
-              novelty=True, 
-              layer='pi', 
+              novelty=True,
+              layer='pi',
               browser=True)
 ```
 
-    
+
     Plotting transcripts for ENSMUSG00000020836.15
     Saving transcript path graph for TALONT000544061 as figures/coro6_browser_TALONT000544061_path.png
     Saving transcript path graph for ENSMUST00000102493.7 as figures/coro6_browser_ENSMUST00000102493.7_path.png
@@ -1939,19 +1745,7 @@ die_genes.loc[die_genes.gname == 'Smtn']
 
 
 <div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
 
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -1985,12 +1779,12 @@ sg.gen_report('Smtn',
               metadata_cols=['time_point'],
               cmap='magma',
               transcript_name=True,
-              novelty=True, 
-              layer='pi', 
+              novelty=True,
+              layer='pi',
               browser=True)
 ```
 
-    
+
     Plotting transcripts for ENSMUSG00000020439.17
     Saving transcript path graph for ENSMUST00000020721.14 as figures/smtn_browser_ENSMUST00000020721.14_path.png
     Saving transcript path graph for ENSMUST00000020718.9 as figures/smtn_browser_ENSMUST00000020718.9_path.png
@@ -2010,19 +1804,7 @@ die_genes.loc[die_genes.gname == 'Pkm']
 
 
 <div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
 
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -2056,12 +1838,12 @@ sg.gen_report('Pkm',
               metadata_cols=['time_point'],
               cmap='magma',
               transcript_name=True,
-              novelty=True, 
-              layer='pi', 
+              novelty=True,
+              layer='pi',
               browser=True)
 ```
 
-    
+
     Plotting transcripts for ENSMUSG00000032294.17
     Saving transcript path graph for ENSMUST00000034834.15 as figures/pkm_browser_ENSMUST00000034834.15_path.png
     Saving transcript path graph for ENSMUST00000163694.3 as figures/pkm_browser_ENSMUST00000163694.3_path.png
@@ -2183,9 +1965,9 @@ sg.plot_graph('Chp1', indicate_novel=True)
 ```
 
 
-    
+
 ![png](output_94_0.png)
-    
+
 
 
 
@@ -2195,13 +1977,13 @@ sg.gen_report('Chp1',
               metadata_cols=['time_point'],
               cmap='magma',
               transcript_name=True,
-              novelty=True, 
-              layer='pi', 
+              novelty=True,
+              layer='pi',
               browser=True,
               display_numbers=True)
 ```
 
-    
+
     Plotting transcripts for ENSMUSG00000014077.13
     Saving transcript path graph for ENSMUST00000014221.12 as figures/chp1_browser_ENSMUST00000014221.12_path.png
     Saving transcript path graph for ENSMUST00000137585.2 as figures/chp1_browser_ENSMUST00000137585.2_path.png
@@ -2222,7 +2004,7 @@ sg.gen_report('Chp1',
               indicate_novel=True)
 ```
 
-    
+
     Plotting transcripts for ENSMUSG00000014077.13
     Saving transcript path graph for ENSMUST00000014221.12 as figures/chp1_novel_ENSMUST00000014221.12_path.png
     Saving transcript path graph for ENSMUST00000137585.2 as figures/chp1_novel_ENSMUST00000137585.2_path.png
@@ -2242,19 +2024,7 @@ es.loc[es.gname == 'Tfdp1']
 
 
 <div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
 
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -2293,9 +2063,9 @@ sg.plot_transcript_path('TALONT000169332', indicate_novel=True, prefix='figures/
 ```
 
 
-    
+
 ![png](output_99_0.png)
-    
+
 
 
     Saving transcript path graph for TALONT000169332 as figures/tfdp1_novel_TALONT000169332_path.png
@@ -2308,13 +2078,13 @@ sg.gen_report('Tfdp1',
               metadata_cols=['time_point'],
               cmap='magma',
               transcript_name=True,
-              novelty=True, 
-              layer='pi', 
+              novelty=True,
+              layer='pi',
               browser=True,
               display_numbers=True)
 ```
 
-    
+
     Plotting transcripts for ENSMUSG00000038482.11
     Saving transcript path graph for TALONT000168710 as figures/tfdp1_browser_TALONT000168710_path.png
     Saving transcript path graph for ENSMUST00000209885.1 as figures/tfdp1_browser_ENSMUST00000209885.1_path.png
@@ -2343,7 +2113,7 @@ sg.gen_report('Tfdp1',
               indicate_novel=True)
 ```
 
-    
+
     Plotting transcripts for ENSMUSG00000038482.11
     Saving transcript path graph for TALONT000168710 as figures/tfdp1_novel_TALONT000168710_path.png
     Saving transcript path graph for ENSMUST00000209885.1 as figures/tfdp1_novel_ENSMUST00000209885.1_path.png
@@ -2380,19 +2150,7 @@ tss_genes.sort_values(by='dpi', ascending=False)
 
 
 <div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
 
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -2511,7 +2269,7 @@ sg.gen_report('Tnnt2',
               indicate_novel=True)
 ```
 
-    
+
     Plotting transcripts for ENSMUSG00000026414.13
     Saving transcript path graph for TALONT000394811 as figures/tnnt2_novel_TALONT000394811_path.png
     Saving transcript path graph for TALONT000394812 as figures/tnnt2_novel_TALONT000394812_path.png
@@ -2536,13 +2294,13 @@ sg.gen_report('Tnnt2',
               metadata_cols=['time_point'],
               cmap='magma',
               transcript_name=True,
-              novelty=True, 
-              layer='pi', 
+              novelty=True,
+              layer='pi',
               browser=True,
               display_numbers=True)
 ```
 
-    
+
     Plotting transcripts for ENSMUSG00000026414.13
     Saving transcript path graph for TALONT000394811 as figures/tnnt2_browser_TALONT000394811_path.png
     Saving transcript path graph for TALONT000394812 as figures/tnnt2_browser_TALONT000394812_path.png
@@ -2570,9 +2328,9 @@ sc.pl.matrixplot(sg.tss_adata, var_names,
 ```
 
 
-    
+
 ![png](output_107_0.png)
-    
+
 
 
 ### What genes exhibit TES switching between myoblasts and myotubes?
@@ -2592,19 +2350,7 @@ tes_genes.sort_values(by='dpi', ascending=False)
 
 
 <div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
 
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -2717,14 +2463,14 @@ tes_genes.sort_values(by='dpi', ascending=False)
 sg.gen_report('Tpm1',
               'figures/tpm1',
               metadata_cols=['time_point'],
-              groupby='time_point', 
+              groupby='time_point',
               cmap='viridis',
               transcript_name=True,
               novelty=True,
               indicate_novel=True)
 ```
 
-    
+
     Plotting transcripts for ENSMUSG00000032366.15
     Saving transcript path graph for ENSMUST00000113707.8 as figures/tpm1_novel_ENSMUST00000113707.8_path.png
     Saving transcript path graph for ENSMUST00000113685.9 as figures/tpm1_novel_ENSMUST00000113685.9_path.png
@@ -2757,16 +2503,16 @@ sg.gen_report('Tpm1',
 sg.gen_report('Tpm1',
               'figures/tpm1',
               metadata_cols=['time_point'],
-              groupby='time_point', 
+              groupby='time_point',
               cmap='magma',
               transcript_name=True,
-              novelty=True, 
-              layer='pi', 
+              novelty=True,
+              layer='pi',
               browser=True,
               display_numbers=True)
 ```
 
-    
+
     Plotting transcripts for ENSMUSG00000032366.15
     Saving transcript path graph for ENSMUST00000113707.8 as figures/tpm1_browser_ENSMUST00000113707.8_path.png
     Saving transcript path graph for ENSMUST00000113685.9 as figures/tpm1_browser_ENSMUST00000113685.9_path.png
@@ -2804,9 +2550,9 @@ sc.pl.matrixplot(sg.tes_adata, var_names,
 ```
 
 
-    
+
 ![png](output_113_0.png)
-    
+
 
 
 

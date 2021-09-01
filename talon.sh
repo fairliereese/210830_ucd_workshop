@@ -13,10 +13,10 @@ gunzip ref/gencode.vM21.annotation.gtf.gz
 
 # make talon config file
 touch config.csv
-printf "PB154,C2C12 myoblast,SequelII,c2c12_myoblast_1.bam\n" >> talon_config.csv
-printf "PB155,C2C12 myoblast,SequelII,c2c12_myoblast_2.bam\n" >> talon_config.csv
-printf "PB213,C2C12 myotube,SequelII,c2c12_myotube_1.bam\n" >> talon_config.csv
-printf "PB214,C2C12 myotube,SequelII,c2c12_myotube_2.bam\n" >> talon_config.csv
+printf "PB154,C2C12 myoblast,SequelII,c2c12_myoblast_1.bam\n" >> config.csv
+printf "PB155,C2C12 myoblast,SequelII,c2c12_myoblast_2.bam\n" >> config.csv
+printf "PB213,C2C12 myotube,SequelII,c2c12_myotube_1.bam\n" >> config.csv
+printf "PB214,C2C12 myotube,SequelII,c2c12_myotube_2.bam\n" >> config.csv
 
 # run talon
 talon_initialize_database \
